@@ -3,13 +3,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-//siva
+
 public class TicTacToe {
 	static List<Integer> playerPositions= new ArrayList<Integer>();
 	static List<Integer> cpuPositions = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// The main board
 		char[][] board = new char[][] {{' ','|',' ','|',' '},
 										{'-','+','-','+','-'},
 										{' ','|',' ','|',' '},
@@ -49,7 +49,7 @@ public class TicTacToe {
 		printBoard(board);
 										
 	}
-
+	// Funtion to print the board
 	public static void printBoard(char[][] board) {
 		for(char[] c : board) {
 			for(char d :c) {
@@ -58,7 +58,7 @@ public class TicTacToe {
 			System.out.println();
 		}
 	}
-	
+	//Func to make a move
 	public static char[][] playBoard(char[][] board , int pos, String user){
 		char symbol = ' ';
 		if(user.equals("player"))
@@ -104,7 +104,7 @@ public class TicTacToe {
 		}
 		return board;
 	}
-	
+	// func checks the winner after the CPU move
 	public static String checkWinner() {
 		List topRow = Arrays.asList(1,2,3);
 		List midRow = Arrays.asList(4,5,6);
